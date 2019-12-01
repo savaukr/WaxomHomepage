@@ -1,0 +1,225 @@
+@font-face {
+  font-family: "Raleway-Regular";
+  src:url("../fonts/Raleway-Regular.ttf");
+} 
+@font-face {
+  font-family: "Raleway-Bold";
+  src:url("../fonts/Raleway-Bold.ttf");
+} 
+@font-face {
+  font-family: "Raleway-SemiBold";
+  src:url("../fonts/Raleway-SemiBold.ttf");
+} 
+@font-face {
+  font-family: "Raleway-Medium";
+  src:url("../fonts/Raleway-Medium.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  src:url("../fonts/Montserrat-Regular.ttf");
+}
+
+header {
+	background: url(../image/header/fon_header.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;	
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.menu {
+	display: flex;
+	justify-content: space-around;
+}
+.menu ul {
+	display:flex;
+	justify-content: space-between;
+}
+.menu li {
+	padding-right: 2rem;
+}
+.menu a {
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Montserrat";
+  color: rgb(255, 255, 255);
+}
+.menu a:hover {
+	color: rgb(199, 178, 153);
+}
+nav {
+	display: flex;
+	padding-top: 4rem;
+}
+nav div img:first-child {
+	margin-right: 1rem;
+}
+.logo {
+	padding-top: 2.5rem;
+}
+
+.header-bottom {
+	text-align: center;
+	padding-bottom: 3%;
+}
+.slider {
+	padding-bottom: 10%;
+}
+.slide {
+	width: 50%;
+	margin: 0 auto;
+	padding-bottom: 5%;
+	position:relative;
+}
+.slide h3{
+  font-size: 36px;
+  font-family: "Raleway";
+  color: rgb(255, 255, 255);
+}
+.slide h2 {
+  font-size: 52px;
+  font-family: "Raleway";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+.slide p {
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: rgb(255, 255, 255);
+  line-height: 1.5;
+  margin-top: 2rem;
+}
+.slider button {
+  padding: 1rem 2rem;
+  font-size: 14px;
+  font-family: "Raleway";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  background-color: rgb(153,134,117);
+  border: none;
+  border-radius: 5px;
+}
+.indicate-slider span {
+	display: inline-block;
+	border-radius: 50%;
+	width:10px;
+	height: 10px;
+	background-color: rgb(142,143,145);
+}
+.indicate-slider span.active  {
+	background-color: inherit;
+	border: 2px solid rgb(255,255,255);
+	width:15px;
+	height: 15px;
+	position:relative;
+	top:3px;
+}
+.arrow-left, .arrow-right {
+	width: 41px;
+	height: 41px;
+	border-left: 2px solid rgb(160,159,157);
+	border-bottom: 2px solid rgb(160,159,157);
+	position: absolute;
+	top:50%;
+}
+.arrow-left {
+	transform: rotate(45deg);
+	left:-40%;
+}
+.arrow-right {
+	right:-40%;
+	transform: rotate(225deg);
+}
+.arrow-left:hover, .arrow-right:hover {
+	border-color:rgb(211,193,173);
+}
+
+main {
+	text-align: center;
+	max-width:1175px;
+	margin:0 auto;
+}
+.projects {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.main-header h1 {
+  font-size: 30px;
+  font-family: "Raleway";
+  color: rgb(85, 85, 85);
+  font-weight: bold;
+  line-height: 1.2;
+  padding-top: 125px;
+}
+.main-header>p {
+  margin:0 auto;
+  width:37%;
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: rgb(140, 140, 140);
+  padding-top: 25px;
+}
+.filtr {
+	padding: 45px 0 40px;
+}
+.filtr button {
+	padding: 10px 22px;
+	font-size: 14px;
+	font-family: "Montserrat";
+	color: rgb(140, 140, 140);
+	background-color: inherit;
+	border: 1px solid rgb(235,235,235);
+	border-radius: 4px;
+	outline: none;
+}
+.filtr button.active {
+	background-color: rgb(153,134,117);
+	color: rgb(255, 255, 255);;
+}
+.description {
+		text-align: left;
+		padding: 30px 0  30px 30px;
+		position:relative;
+		background-color: rgb(251,250,248);
+}
+.description:hover {
+	background-color: rgb(54,47,45);
+}
+.description>div {
+	width:40px;
+	height: 40px;
+	position:absolute;
+	top:-10px;
+	background-color: inherit;
+	opacity: 2;
+	transform: rotate(-45deg);
+}
+.description h3 {
+	font-size: 20px;
+	font-family: "Raleway";
+	color: rgb(199, 178, 153);
+}
+.description p {
+	font-size: 14px;
+	font-family: "Montserrat";
+	color: rgb(209, 209, 209);
+	padding-top: 14px;
+}
+main>div:last-child {
+	padding-top: 70px;
+}
+#load-more {
+	background-color: rgb(153,134,117);;
+	color: rgb(255, 255, 255);
+	padding: 20px 45px;
+	border:none;
+	outline: none;
+	font-size:14px;
+	border-radius:3px;
+	box-shadow: 0px 3px 0px 0px rgba(115,99,87);
+}
+
+
+
