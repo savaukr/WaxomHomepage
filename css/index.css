@@ -144,6 +144,10 @@ main {
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
+.projects>div {
+	font-size: 0;
+	padding-bottom: 30px;
+} 
 
 .main-header h1 {
   font-size: 30px;
@@ -188,24 +192,30 @@ main {
 	background-color: rgb(54,47,45);
 }
 .description>div {
-	width:40px;
-	height: 40px;
+	width:32px;
+	height: 25px;
 	position:absolute;
-	top:-10px;
+	top:-8px;
 	background-color: inherit;
 	opacity: 2;
-	transform: rotate(-45deg);
+	transform: rotate(-45deg) skewX(12deg);
 }
 .description h3 {
 	font-size: 20px;
 	font-family: "Raleway";
 	color: rgb(199, 178, 153);
 }
+.description:hover h3 {
+  color: rgb(255, 255, 255);
+}
 .description p {
 	font-size: 14px;
 	font-family: "Montserrat";
 	color: rgb(209, 209, 209);
 	padding-top: 14px;
+}
+.description:hover p {
+  color: rgb(199, 178, 153);
 }
 main>div:last-child {
 	padding-top: 70px;
