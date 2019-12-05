@@ -44,7 +44,6 @@
 	transition: right 1s ease;
 }
 .menu-flow.invisible {
-	/*display: none;*/
 	right: -1000px;
 }
 .menu-flow ul{
@@ -67,3 +66,9 @@
 		display: block;
 	}
 }
+@media screen and (min-width: 1000px) {
+	.menu-flow {
+		right: -1000px;
+	}
+}
+

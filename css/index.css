@@ -66,7 +66,7 @@ header >div {
 nav {
 	display: flex;
 	padding-top: 4rem;
-	
+
 }
 nav div img:first-child {
 	margin-right: 1rem;
@@ -123,7 +123,7 @@ nav div img:first-child {
 	height: 10px;
 	background-color: rgb(142,143,145);
 }
-.indicate-slider span.active  {
+.indicate-slider .span-active  {
 	background-color: inherit;
 	border: 2px solid rgb(255,255,255);
 	width:15px;
@@ -203,6 +203,9 @@ main {
 .filtr button.active {
 	background-color: rgb(153,134,117);
 	color: rgb(255, 255, 255);;
+}
+.filtr-not-fit {
+	display:none;
 }
 .description {
 		text-align: left;
