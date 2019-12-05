@@ -1,3 +1,5 @@
+@import url('./menuFlow.css');
+
 @font-face {
   font-family: "Raleway-Regular";
   src:url("../fonts/Raleway-Regular.ttf");
@@ -19,14 +21,27 @@
   src:url("../fonts/Montserrat-Regular.ttf");
 }
 
-header {
+header{
 	background: url(../image/header/fon_header.jpg) no-repeat;
 	background-size: cover;
-	height: 100vh;	
+	/*min-height: 100vh;*/
+			
+}
+header>div, main, .footer-top-container, .footer-bottom-container{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 5px;
+}
+header >div {
+	-ms-height: 100vh;
+	height: 100vh;
+	/*max-width: 1200px;
+	margin: 0 auto;*/
 	display:flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
+
 .menu {
 	display: flex;
 	justify-content: space-around;
@@ -34,9 +49,10 @@ header {
 .menu ul {
 	display:flex;
 	justify-content: space-between;
+	padding-left:20px;
 }
 .menu li {
-	padding-right: 2rem;
+	padding-right: 30px;
 }
 .menu a {
   text-decoration: none;
@@ -50,20 +66,17 @@ header {
 nav {
 	display: flex;
 	padding-top: 4rem;
+	
 }
 nav div img:first-child {
 	margin-right: 1rem;
 }
+
 .logo {
 	padding-top: 2.5rem;
 }
-
-.header-bottom {
-	text-align: center;
-	padding-bottom: 3%;
-}
 .slider {
-	padding-bottom: 10%;
+	text-align: center;
 }
 .slide {
 	width: 50%;
@@ -98,6 +111,10 @@ nav div img:first-child {
   background-color: rgb(153,134,117);
   border: none;
   border-radius: 5px;
+}
+.header-bottom {
+	text-align: center;
+	padding: 3% 0;
 }
 .indicate-slider span {
 	display: inline-block;
@@ -136,11 +153,17 @@ nav div img:first-child {
 
 main {
 	text-align: center;
-	max-width:1175px;
-	margin:0 auto;
+	/*max-width:1200px;
+	margin:0 auto;*/
 }
 .projects {
+	max-width:1200px;
+	margin: 0 auto;
 	display: flex;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
@@ -148,7 +171,6 @@ main {
 	font-size: 0;
 	padding-bottom: 30px;
 } 
-
 .main-header h1 {
   font-size: 30px;
   font-family: "Raleway";
@@ -219,6 +241,7 @@ main {
 }
 main>div:last-child {
 	padding-top: 70px;
+	padding-bottom:7%;
 }
 #load-more {
 	background-color: rgb(153,134,117);;
@@ -230,6 +253,97 @@ main>div:last-child {
 	border-radius:3px;
 	box-shadow: 0px 3px 0px 0px rgba(115,99,87);
 }
+footer >div:first-child {
+	background-color: rgb(25,25,25);
 
+}
+footer >div:last-child {
+	background-color: rgb(17,17,17);
+}
+.footer-top-container, .footer-bottom-container {
+	/*max-width: 1200px;
+	margin: 0 auto;*/
+}
+.footer-top {
+	display: flex;
+	justify-content: space-around;
+	font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(85, 85, 85);
+    line-height: 1.429;
+    padding: 80px 0;
+}
+.footer-top h4 {
+  font-size: 24px;
+  font-family: "Raleway";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.2;
+  padding-bottom: 30px;
+}
+.footer-top div:first-child div {
+	color: rgb(255,255,255);
+	padding-top: 30px;
+}
+.footer-logo {
+	position: relative;
+	top: -1rem;
+}
+.footer-top > div{
+	flex-basis: 25%;
+	
+}
+.footer-top >div:not(:last-child) {
+	padding-right:1rem;
+}
+.post-res:not(:last-child) {
+	border-bottom: 1px solid rgb(85, 85, 85);
+	padding-bottom: 24px;
+}
+.post-res:not(:first-child) {
+	padding-top: 20px; 
+}
+.post-date {
+  font-size: 12px;
+  font-family: "Montserrat";
+  color: rgb(255, 255, 255);
+  line-height: 1.667;
+}
+.footer-bottom {
+	display:flex;
+	justify-content: space-between;
+	padding:48px 0 54px;
+}
+.footer-bottom>div {
+	display: flex;
+	justify-content: space-between;
+}
+.footer-bottom> div {
+  font-size: 13px;
+  font-family: "Montserrat";
+  color: rgb(85, 85, 85);
+  line-height: 1.538;
+}
+.footer-bottom>div div:not(:last-child) {
+	border-right: 1px solid rgb(85, 85, 85);
+	padding-right: 1rem;
+}
+.footer-bottom>div div:not(:first-child) {
+	padding-left: 1rem;
+}
+.footer-bottom span{
+	color:rgb(199,178,153);
+}
+
+@media screen and (max-height: 450px){
+	header>div {
+		height: auto;
+	}
+}
+@media screen and (max-width: 1000px) {
+	ul.main-menu {
+		display: none;
+	}
+}
 
 
