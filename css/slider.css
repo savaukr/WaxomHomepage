@@ -1,0 +1,52 @@
+.clear {
+  margin-top: -1px;
+  height: 1px;
+  clear: both;
+  zoom: 1;
+}
+/* Slider */
+.slider {
+  /* Ширина контейнера */
+  max-width: 635px;
+  /* Внешние тступы сверху и снизу */
+  margin: 10px auto;
+  /* Внутренние отступы для ссылок navy */
+  padding: 0 30px;
+  /* Позиционирование */
+  position: relative;
+  /* Скроем то что выходит за границы */
+  overflow-x: hidden;
+}
+/* Двойной клик по ссылкам вперед/назад вызывает выделение всех элементов слайдера,
+поэтому предотвращаем это */
+.slider::-moz-selection {
+  background: transparent;
+  color: #fff;
+  text-shadow: none;
+}
+.slider::selection {
+  background: transparent;
+  color: #fff;
+  text-shadow: none;
+}
+.slide-list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.slide-wrap {
+  position: relative;
+  left: 0;
+  top: 0;
+  /* максимально возможная ширина обертки слайдера */
+  width: 10000000px;
+}
+.slide-item {
+  /* Ширина слайда */
+  width: 600px;
+  margin-right: 10px;
+  /* Внутренние отступы */
+  padding: 10px;
+  /* Обтекание */
+  float: left;
+}

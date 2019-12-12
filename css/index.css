@@ -1,4 +1,5 @@
 @import url('./menuFlow.css');
+@import url('./slider.css');
 
 @font-face {
   font-family: "Raleway-Regular";
@@ -61,7 +62,7 @@ header >div {
   color: rgb(255, 255, 255);
 }
 .menu a:hover {
-	color: rgb(199, 178, 153);
+	color: rgb(180, 160, 135);
 }
 nav {
 	display: flex;
@@ -76,26 +77,29 @@ nav div img:first-child {
 	padding-top: 2.5rem;
 }
 .slider {
-	text-align: center;
+	/*text-align: center;*/
 }
-.slide {
-	width: 50%;
+.slide-list {
+	padding-bottom: 15%;
+}
+.slide-item {
+	/*width: 50%;
 	margin: 0 auto;
 	padding-bottom: 5%;
-	position:relative;
+	position:relative;*/
 }
-.slide h3{
+.slide-item h3{
   font-size: 36px;
   font-family: "Raleway";
   color: rgb(255, 255, 255);
 }
-.slide h2 {
+.slide-item h2 {
   font-size: 52px;
   font-family: "Raleway";
   color: rgb(255, 255, 255);
   font-weight: bold;
 }
-.slide p {
+.slide-item p {
   font-size: 16px;
   font-family: "Montserrat";
   color: rgb(255, 255, 255);
@@ -131,7 +135,7 @@ nav div img:first-child {
 	position:relative;
 	top:3px;
 }
-.arrow-left, .arrow-right {
+.navy {
 	width: 41px;
 	height: 41px;
 	border-left: 2px solid rgb(160,159,157);
@@ -139,15 +143,15 @@ nav div img:first-child {
 	position: absolute;
 	top:50%;
 }
-.arrow-left {
+.prev-slide {
 	transform: rotate(45deg);
-	left:-40%;
+	left:1%;
 }
-.arrow-right {
-	right:-40%;
+.next-slide {
+	right:1%;
 	transform: rotate(225deg);
 }
-.arrow-left:hover, .arrow-right:hover {
+.navy:hover {
 	border-color:rgb(211,193,173);
 }
 

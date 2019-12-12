@@ -3,7 +3,7 @@ function redy() {
 		document.querySelector('.menu-flow').classList.toggle("invisible");
 		this.classList.toggle("cross");
 	}
-	
+
 	function loadMore(){
 		let div= document.createElement('div');
 		alert('good');
@@ -33,15 +33,17 @@ function redy() {
 		filtr(elem, 'filtr-not-fit');
 	}
 
-	document.querySelector('.menu-minimized').
-		addEventListener('click', flowMenu);
+	/*document.querySelector('.menu-minimized').
+		addEventListener('click', flowMenu);*/
+	document.querySelector('.menu-minimized').onclick = flowMenu;
 	document.querySelector('#load-more').
 		addEventListener('click', loadMore);
 	document.querySelector('.filtr').
 		addEventListener('click', addActiveClass);
 }
 
-document.addEventListener('DOMContentLoaded', redy);
+redy();
+/*document.addEventListener('DOMContentLoaded', redy);*/
 /*
 					<div>
 						<img src="image/main/photo1.jpg" alt="Photography, Nature">
