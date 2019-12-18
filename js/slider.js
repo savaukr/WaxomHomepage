@@ -33,10 +33,12 @@ jQuery(document).ready(function(){
 		/* смещение слайдера */
 		var newLeftPos = slideWrap.position().left - slideWidth;
 		
+		
+		var spanActive;
 		/* Клик по ссылке на следующий слайд */
 		nextLink.click(function(){
 			if(!slideWrap.is(':animated')) {
-	
+				spanActive = jQuery('.span-active');
 				slideWrap.animate({left: newLeftPos}, 500, function(){
 					slideWrap
 						.find('.slide-item:first')
@@ -44,21 +46,24 @@ jQuery(document).ready(function(){
 						.parent()
 						.css({'left': 0});
 				});
-
+				spanActive.removeClass('span-active');
+				spanActive.next('span').addClass('span-active');
 			}
+
 		});
 
 		/* Клик по ссылке на предыдующий слайд */
 		prevLink.click(function(){
 			if(!slideWrap.is(':animated')) {
-			
+				spanActive = jQuery('.span-active');
 				slideWrap
 					.css({'left': newLeftPos})
 					.find('.slide-item:last')
 					.prependTo(slideWrap)
 					.parent()
 					.animate({left: 0}, 500);
-
+				spanActive.removeClass('span-active');
+				spanActive.prev('.indicate-slider span').addClass('span-active')
 			}
 		});
 		

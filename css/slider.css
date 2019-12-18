@@ -118,6 +118,10 @@
 	border-left: 2px solid rgb(160,159,157);
 	border-bottom: 2px solid rgb(160,159,157);
 }
+.navy.disable {
+  background: #fff;
+  cursor: default;
+}
 .prev-slide {
 	left:10%;
 	transform: rotate(45deg);
