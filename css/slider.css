@@ -9,7 +9,7 @@
   /* Ширина контейнера */
   max-width: 635px;
   /* Внешние тступы сверху и снизу */
-  margin: 10px auto;
+  margin: 41px auto;
   /* Внутренние отступы для ссылок navy */
   padding: 0 30px;
   /* Позиционирование */
@@ -29,24 +29,111 @@
   color: #fff;
   text-shadow: none;
 }
+.slider {
+	/*position: relative;*/
+}
 .slide-list {
-  position: relative;
+  /*position: relative;*/
   margin: 0;
-  padding: 0;
 }
 .slide-wrap {
-  position: relative;
+  /*position: relative;
   left: 0;
-  top: 0;
+  top: 0;*/
   /* максимально возможная ширина обертки слайдера */
   width: 10000000px;
 }
 .slide-item {
   /* Ширина слайда */
-  width: 600px;
+  max-width: 594px;
   margin-right: 10px;
   /* Внутренние отступы */
   padding: 10px;
   /* Обтекание */
   float: left;
+  /*width: 50%;
+	margin: 0 auto;
+	padding-bottom: 5%;
+	position:relative;*/
+}
+
+.slider {
+	text-align: center;
+}
+.slide-list {
+	padding-bottom: 45%;
+	
+}
+
+.slide-item h3{
+  font-size: 36px;
+  font-family: "Raleway";
+  color: rgb(255, 255, 255);
+}
+.slide-item h2 {
+  font-size: 52px;
+  font-family: "Raleway";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+.slide-item p {
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: rgb(255, 255, 255);
+  line-height: 1.5;
+  margin-top: 2rem;
+}
+.slider button {
+  padding: 1rem 2rem;
+  font-size: 14px;
+  font-family: "Raleway";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  background-color: rgb(153,134,117);
+  border: none;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+.indicate-slider span {
+	display: inline-block;
+	border-radius: 50%;
+	width:10px;
+	height: 10px;
+	background-color: rgb(142,143,145);
+}
+.indicate-slider .span-active  {
+	background-color: inherit;
+	border: 2px solid rgb(255,255,255);
+	width:15px;
+	height: 15px;
+	position:relative;
+	top:3px;
+}
+.navy {
+	position: absolute;
+	top:42%;
+	width: 41px;
+	height: 41px;
+	border-left: 2px solid rgb(160,159,157);
+	border-bottom: 2px solid rgb(160,159,157);
+}
+.prev-slide {
+	left:10%;
+	transform: rotate(45deg);
+}
+.next-slide {
+	right: 10%;
+	transform: rotate(225deg);
+}
+.navy:hover {
+	border-color:rgb(211,193,173);
+}
+@media screen and (max-width: 800px){
+	.prev-slide {
+		left:3%;
+	}
+	.next-slide {
+		right: 3%;
+	}
 }

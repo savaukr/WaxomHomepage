@@ -25,6 +25,7 @@
 header{
 	background: url(../image/header/fon_header.jpg) no-repeat;
 	background-size: cover;
+	position: relative;
 	/*min-height: 100vh;*/
 			
 }
@@ -76,83 +77,9 @@ nav div img:first-child {
 .logo {
 	padding-top: 2.5rem;
 }
-.slider {
-	/*text-align: center;*/
-}
-.slide-list {
-	padding-bottom: 15%;
-}
-.slide-item {
-	/*width: 50%;
-	margin: 0 auto;
-	padding-bottom: 5%;
-	position:relative;*/
-}
-.slide-item h3{
-  font-size: 36px;
-  font-family: "Raleway";
-  color: rgb(255, 255, 255);
-}
-.slide-item h2 {
-  font-size: 52px;
-  font-family: "Raleway";
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-}
-.slide-item p {
-  font-size: 16px;
-  font-family: "Montserrat";
-  color: rgb(255, 255, 255);
-  line-height: 1.5;
-  margin-top: 2rem;
-}
-.slider button {
-  padding: 1rem 2rem;
-  font-size: 14px;
-  font-family: "Raleway";
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  background-color: rgb(153,134,117);
-  border: none;
-  border-radius: 5px;
-}
 .header-bottom {
 	text-align: center;
 	padding: 3% 0;
-}
-.indicate-slider span {
-	display: inline-block;
-	border-radius: 50%;
-	width:10px;
-	height: 10px;
-	background-color: rgb(142,143,145);
-}
-.indicate-slider .span-active  {
-	background-color: inherit;
-	border: 2px solid rgb(255,255,255);
-	width:15px;
-	height: 15px;
-	position:relative;
-	top:3px;
-}
-.navy {
-	width: 41px;
-	height: 41px;
-	border-left: 2px solid rgb(160,159,157);
-	border-bottom: 2px solid rgb(160,159,157);
-	position: absolute;
-	top:50%;
-}
-.prev-slide {
-	transform: rotate(45deg);
-	left:1%;
-}
-.next-slide {
-	right:1%;
-	transform: rotate(225deg);
-}
-.navy:hover {
-	border-color:rgb(211,193,173);
 }
 
 main {
