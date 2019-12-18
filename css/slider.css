@@ -16,6 +16,8 @@
   position: relative;
   /* Скроем то что выходит за границы */
   overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: center;
 }
 /* Двойной клик по ссылкам вперед/назад вызывает выделение всех элементов слайдера,
 поэтому предотвращаем это */
@@ -29,12 +31,8 @@
   color: #fff;
   text-shadow: none;
 }
-.slider {
-	/*position: relative;*/
-}
 .slide-list {
-  /*position: relative;*/
-  margin: 0;
+	padding-bottom: 45%;
 }
 .slide-wrap {
   /*position: relative;
@@ -55,14 +53,6 @@
 	margin: 0 auto;
 	padding-bottom: 5%;
 	position:relative;*/
-}
-
-.slider {
-	text-align: center;
-}
-.slide-list {
-	padding-bottom: 45%;
-	
 }
 
 .slide-item h3{
@@ -119,7 +109,8 @@
 	border-bottom: 2px solid rgb(160,159,157);
 }
 .navy.disable {
-  background: #fff;
+  /*background: #fff;*/
+  border-color: transparent;
   cursor: default;
 }
 .prev-slide {
@@ -133,11 +124,19 @@
 .navy:hover {
 	border-color:rgb(211,193,173);
 }
+.auto {
+	outline: none;
+}
 @media screen and (max-width: 800px){
 	.prev-slide {
 		left:3%;
 	}
 	.next-slide {
 		right: 3%;
+	}
+}
+@media screen and (max-height: 450px){
+	.slide-list {
+		padding-bottom: 5%;
 	}
 }

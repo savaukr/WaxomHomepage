@@ -4,6 +4,7 @@ jQuery(document).ready(function(){
 	var prevLink = jQuery('.prev-slide');
 	/* ширина слайда с отступами */
 	var slideWidth = jQuery('.slide-item').outerWidth();
+	var playLink = jQuery('.auto');
 
 // видалення стрілок в слайдері, якщо мало елементів		
 	function deleteShowArrow() {
@@ -47,7 +48,7 @@ jQuery(document).ready(function(){
 						.css({'left': 0});
 				});
 				spanActive.removeClass('span-active');
-				spanActive.next('span').addClass('span-active');
+				spanActive.next('.indicate-slider span').addClass('span-active');
 			}
 
 		});
@@ -55,7 +56,8 @@ jQuery(document).ready(function(){
 		/* Клик по ссылке на предыдующий слайд */
 		prevLink.click(function(){
 			if(!slideWrap.is(':animated')) {
-				spanActive = jQuery('.span-active');
+				spanActive = jQuery('.span-active') || jQuery('.indicate-slider span').eq(5);
+				spanActive.addClass('span-active');
 				slideWrap
 					.css({'left': newLeftPos})
 					.find('.slide-item:last')
@@ -69,7 +71,7 @@ jQuery(document).ready(function(){
 		
 		
 		/* Функция автоматической прокрутки слайдера */
-		/*
+		
 		function autoplay(){
 			if(!is_animate){
 				is_animate = true;
@@ -83,9 +85,9 @@ jQuery(document).ready(function(){
 				});
 			}
 		}
-		*/
+		
 		/* Клики по ссылкам старт/пауза */
-		/*
+		
 		playLink.click(function(){
 			if(playLink.hasClass('play')){
 				playLink.removeClass('play').addClass('pause');
@@ -97,7 +99,7 @@ jQuery(document).ready(function(){
 				clearInterval(timer);
 			}
 		});
-*/
+
 	}
 	
 	/* иницилизируем функцию слайдера */
