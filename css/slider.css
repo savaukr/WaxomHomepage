@@ -8,10 +8,11 @@
 .slider {
   /* Ширина контейнера */
   max-width: 635px;
+  height: 60%;
   /* Внешние тступы сверху и снизу */
-  margin: 41px auto;
+  margin: 10px auto;
   /* Внутренние отступы для ссылок navy */
-  padding: 0 30px;
+  padding: 0 41px;
   /* Позиционирование */
   position: relative;
   /* Скроем то что выходит за границы */
@@ -32,12 +33,9 @@
   text-shadow: none;
 }
 .slide-list {
-	padding-bottom: 45%;
+	padding-bottom: 10%;
 }
 .slide-wrap {
-  /*position: relative;
-  left: 0;
-  top: 0;*/
   /* максимально возможная ширина обертки слайдера */
   width: 10000000px;
 }
@@ -49,10 +47,6 @@
   padding: 10px;
   /* Обтекание */
   float: left;
-  /*width: 50%;
-	margin: 0 auto;
-	padding-bottom: 5%;
-	position:relative;*/
 }
 
 .slide-item h3{
@@ -74,15 +68,7 @@
   margin-top: 2rem;
 }
 .slider button {
-  padding: 1rem 2rem;
-  font-size: 14px;
-  font-family: "Raleway";
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  background-color: rgb(153,134,117);
-  border: none;
-  border-radius: 5px;
-  margin-top: 50px;
+  
 }
 
 .indicate-slider span {
@@ -102,14 +88,13 @@
 }
 .navy {
 	position: absolute;
-	top:42%;
+	top:50%;
 	width: 41px;
 	height: 41px;
 	border-left: 2px solid rgb(160,159,157);
 	border-bottom: 2px solid rgb(160,159,157);
 }
 .navy.disable {
-  /*background: #fff;*/
   border-color: transparent;
   cursor: default;
 }
@@ -125,18 +110,51 @@
 	border-color:rgb(211,193,173);
 }
 .auto {
-	outline: none;
+  padding: 1rem 2rem;
+  font-size: 14px;
+  font-family: "Raleway";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  background-color: rgb(153,134,117);
+  border: none;
+  border-radius: 5px;
+  margin-top: 50px;
+  outline: none;
 }
+.play {
+
+}
+button.pause {
+	background-color: rgb(143,114,97);
+}
+
 @media screen and (max-width: 800px){
 	.prev-slide {
-		left:3%;
+		left:5%;
 	}
 	.next-slide {
-		right: 3%;
+		right: 5%;
 	}
+	
+}
+@media screen and (max-width: 700px){
+	.slider {
+		max-width: 400px;
+		height: 70%;
+	}
+	.slide-item {
+		max-width: 350px;
+	}
+	.navy {
+		width: 25px;
+		height: 25px;
+	}
+	
 }
 @media screen and (max-height: 450px){
 	.slide-list {
 		padding-bottom: 5%;
 	}
+
+
 }

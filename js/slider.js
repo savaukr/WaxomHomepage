@@ -92,10 +92,12 @@ jQuery(document).ready(function(){
 			if(playLink.hasClass('play')){
 				playLink.removeClass('play').addClass('pause');
 				jQuery('.navy').addClass('disable');
+				playLink.html("GET STOPED");
 				timer = setInterval(autoplay, 1000);
 			} else {
 				playLink.removeClass('pause').addClass('play');
 				jQuery('.navy').removeClass('disable');
+				playLink.html("GET STARTED");
 				clearInterval(timer);
 			}
 		});
