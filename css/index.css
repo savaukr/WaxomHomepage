@@ -83,8 +83,6 @@ nav div img:first-child {
 
 main {
 	text-align: center;
-	/*max-width:1200px;
-	margin:0 auto;*/
 }
 .projects {
 	max-width:1200px;
@@ -268,10 +266,14 @@ footer >div:last-child {
 	color:rgb(199,178,153);
 }
 
-@media screen and (max-height: 450px){
+@media screen and (max-height: 500px){
 	header>div {
 		height: auto;
 	}
+	.header-bottom {
+	
+	padding: 1% 0;
+}
 
 }
 @media screen and (max-width: 1000px) {

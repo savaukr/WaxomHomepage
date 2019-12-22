@@ -33,24 +33,27 @@ function redy() {
 		filtr(elem, 'filtr-not-fit');
 	}
 
-	/*document.querySelector('.menu-minimized').
-		addEventListener('click', flowMenu);*/
-	document.querySelector('.menu-minimized').onclick = flowMenu;
+	if (typeof Element.prototype.addEventListener === 'undefined') {
+	    Element.prototype.addEventListener = function (e, callback) {
+	      e = 'on' + e;
+	      return this.attachEvent(e, callback);
+	    };
+	 }
+/*
+	 if (typeof Element.prototype.addEventListener === 'undefined') {
+	    Element.prototype.addEventListener = function (e, callback) {
+	      e = 'on' + e;
+	      return this.attachEvent(e, callback);
+	    };
+	 }
+*/
+
+	document.querySelector('.menu-minimized').
+		addEventListener('click', flowMenu);
 	document.querySelector('#load-more').
 		addEventListener('click', loadMore);
 	document.querySelector('.filtr').
 		addEventListener('click', addActiveClass);
 }
-
 redy();
 /*document.addEventListener('DOMContentLoaded', redy);*/
-/*
-					<div>
-						<img src="image/main/photo1.jpg" alt="Photography, Nature">
-						<div class="description">
-							<div></div>
-							<h3>Claritas Etiam Processus</h3>
-							<p>Photography, Nature</p>
-						</div>
-					</div>
-				*/

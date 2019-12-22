@@ -33,7 +33,7 @@
   text-shadow: none;
 }
 .slide-list {
-	padding-bottom: 10%;
+	padding-bottom: 8%;
 }
 .slide-wrap {
   /* максимально возможная ширина обертки слайдера */
@@ -144,12 +144,15 @@ button.pause {
 		width: 25px;
 		height: 25px;
 	}
-	
+  	
 }
-@media screen and (max-height: 450px){
+@media screen and (max-height: 750px){
 	.slide-list {
-		padding-bottom: 5%;
+		padding-bottom: 0%;
 	}
+  .auto {
+    margin-top: 0;
+  }
 
 
 }
