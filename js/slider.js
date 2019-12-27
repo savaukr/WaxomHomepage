@@ -48,7 +48,11 @@ jQuery(document).ready(function(){
 						.css({'left': 0});
 				});
 				spanActive.removeClass('span-active');
-				spanActive.next('.indicate-slider span').addClass('span-active');
+				if (spanActive.hasClass('indicate-end') ) {
+					spanActive = jQuery('.indicate-first');
+					spanActive.addClass('span-active');
+				} else
+					spanActive.next('.indicate-slider span').addClass('span-active');
 			}
 
 		});
@@ -65,7 +69,11 @@ jQuery(document).ready(function(){
 					.parent()
 					.animate({left: 0}, 500);
 				spanActive.removeClass('span-active');
-				spanActive.prev('.indicate-slider span').addClass('span-active')
+				if (spanActive.hasClass('indicate-first') ) {
+					spanActive = jQuery('.indicate-end');
+					spanActive.addClass('span-active');
+				} else
+					spanActive.prev('.indicate-slider span').addClass('span-active');
 			}
 		});
 		
