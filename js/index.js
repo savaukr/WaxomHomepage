@@ -42,6 +42,7 @@ function redy() {
 		let img= document.createElement('img');
 		img.src = jsonElem.imgSrc;
 		img.alt = jsonElem.alt;
+		img.addEventListener('click', popap);
 		div.append(img);
 		let description= document.createElement('div');
 		description.classList.add('description');
@@ -49,6 +50,22 @@ function redy() {
 		div.append(description);
 		projects.append(div);
 		pointer++;
+	}
+	function popap(e) {
+		let popap = document.createElement('div');
+		popap.classList.add('modal');
+		let modalContent= document.createElement('div');
+		modalContent.classList.add('modal-content');
+		modalContent.style.background= `url(${e.target.src})`;
+		modalContent.style.backgroundSize = 'cover';
+		let span = document.createElement('span');
+		span.classList.add('close');
+		span.innerHTML = '&times';
+		span.addEventListener('click', (e)=>{e.target.parentNode.parentNode.remove()});
+		modalContent.append(span);
+		popap.append(modalContent);
+		let container = document.getElementById('container');
+		container.append(popap);
 	}
 
 	function loadThree(json) {
@@ -86,6 +103,8 @@ function redy() {
 			filtr(elem, 'filtr-not-fit');
 		}
 	}
+
+
 /*
 // для IE
 	if (typeof Element.prototype.addEventListener === 'undefined') {
@@ -96,12 +115,18 @@ function redy() {
 	 }
 	 */
 
+	let projectsImg = document.querySelectorAll('.projects img');
+	for (let i=0; i< projectsImg.length; i++) {
+		projectsImg[i].addEventListener('click', popap);
+	}
+
 	document.querySelector('.menu-minimized').
 		addEventListener('click', flowMenu);
 	document.querySelector('#load-more').
 		addEventListener('click', ()=>{loadThree(json)});
 	document.querySelector('.filtr').
 		addEventListener('click', addActiveClass);
+
 }
 redy();
 /*document.addEventListener('DOMContentLoaded', redy);*/
