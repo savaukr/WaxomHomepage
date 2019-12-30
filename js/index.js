@@ -43,12 +43,12 @@ function redy() {
 		img.src = jsonElem.imgSrc;
 		img.alt = jsonElem.alt;
 		img.addEventListener('click', popap);
-		div.append(img);
+		div.appendChild(img);
 		let description= document.createElement('div');
 		description.classList.add('description');
-		description.innerHTML = `<div></div><h3>${jsonElem.h3}</h3><p>${jsonElem.p}</p>`;
-		div.append(description);
-		projects.append(div);
+		description.innerHTML = "<div></div><h3>" + jsonElem.h3 + "</h3><p>" + jsonElem.p + "</p>";
+		div.appendChild(description);
+		projects.appendChild(div);
 		pointer++;
 	}
 	function popap(e) {
@@ -56,16 +56,19 @@ function redy() {
 		popap.classList.add('modal');
 		let modalContent= document.createElement('div');
 		modalContent.classList.add('modal-content');
-		modalContent.style.background= `url(${e.target.src})`;
+		modalContent.style.background= "url("+e.target.src+")";
 		modalContent.style.backgroundSize = 'cover';
 		let span = document.createElement('span');
 		span.classList.add('close');
 		span.innerHTML = '&times';
-		span.addEventListener('click', (e)=>{e.target.parentNode.parentNode.remove()});
-		modalContent.append(span);
-		popap.append(modalContent);
+		span.addEventListener('click', function(e){
+			let elem=e.target.parentNode.parentNode;
+			elem.parentNode.removeChild(elem);
+		});
+		modalContent.appendChild(span);
+		popap.appendChild(modalContent);
 		let container = document.getElementById('container');
-		container.append(popap);
+		container.appendChild(popap);
 	}
 
 	function loadThree(json) {
@@ -81,13 +84,13 @@ function redy() {
 	function filtr(activeButton,className) {
 		let data = activeButton.dataset.projects;
 		let projects = document.querySelectorAll('.projects>div');
-		for (let proj of projects) {
+		for (let i=0; i < projects.length; i++) {
 			if (data == 'all' ) {
-				proj.classList.remove(className);
-			} else if ( (proj.classList.contains(data)) && proj.classList.contains(className))  {
-				proj.classList.remove(className);
-			} else if (!proj.classList.contains(data)) {
-				proj.classList.add(className);
+				projects[i].classList.remove(className);
+			} else if ( (projects[i].classList.contains(data)) && projects[i].classList.contains(className))  {
+				projects[i].classList.remove(className);
+			} else if (!projects[i].classList.contains(data)) {
+				projects[i].classList.add(className);
 			}
 		}
 	}
@@ -95,8 +98,8 @@ function redy() {
 	function addActiveClass(event) {
 		let elem = event.target;
 		let buttons = document.querySelectorAll('.filtr button');
-		for (let button of buttons) {
-			button.classList.contains('active') ? button.classList.remove('active'): '';
+		for (let i=0; i < buttons.length; i++) {
+			buttons[i].classList.contains('active') ? buttons[i].classList.remove('active'): '';
 		}
 		if (elem.tagName == 'BUTTON') {
 			elem.classList.add('active');
@@ -114,6 +117,20 @@ function redy() {
 	    };
 	 }
 	 */
+/*
+	 let el = document.querySelector('.menu-minimized')
+		if (el.addEventListener){
+  			el.addEventListener('click', flowMenu); 
+		} else if (el.attachEvent){
+  			el.attachEvent('onclick', flowMenu);
+		};
+	let el1 = document.querySelector('#load-more')
+		if (el.addEventListener){
+  			el1.addEventListener('click', ()=>{loadThree(json)}); 
+		} else if (el1.attachEvent){
+  			el1.attachEvent('onclick', ()=>{loadThree(json)});
+		}
+*/
 
 	let projectsImg = document.querySelectorAll('.projects img');
 	for (let i=0; i< projectsImg.length; i++) {
@@ -123,10 +140,10 @@ function redy() {
 	document.querySelector('.menu-minimized').
 		addEventListener('click', flowMenu);
 	document.querySelector('#load-more').
-		addEventListener('click', ()=>{loadThree(json)});
+		addEventListener('click', function(){loadThree(json)});
 	document.querySelector('.filtr').
 		addEventListener('click', addActiveClass);
 
 }
-redy();
-/*document.addEventListener('DOMContentLoaded', redy);*/
+
+document.addEventListener('DOMContentLoaded', redy);
